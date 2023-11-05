@@ -1,0 +1,87 @@
+:root {
+    --clr-surface: #ffffff;
+    --clr-surface2: #f2f2f2;
+    --clr-primary: #4CAF50;
+    --clr-secondary: #76B852;
+    --shadow-default: 0 0 20px 0 rgba(0, 0, 0, 0.2),
+        0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background: var(--clr-secondary);
+}
+
+body {
+    background: var(--clr-surface);
+    
+    min-height: 100vh;
+    max-width: 70ch;
+    width: fit-content;
+    
+    margin: auto;
+    padding: 2rem;
+    box-sizing: border-box;
+
+    box-shadow: var(--shadow-default)
+}
+
+button {
+    color: var(--clr-surface);
+    background: var(--clr-primary);
+    padding: 2rem;
+}
+
+button:hover,
+button:active,
+button:focus {
+    filter: brightness(92%);
+}
+
+ol ol {
+    list-style: lower-alpha;
+}
+
+a {
+    color: var(--clr-primary)
+}
+
+a:visited {
+    color: darkgreen;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.staticrypt-spinner-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.staticrypt-spinner {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: text-bottom;
+    border: 0.25em solid gray;
+    border-right-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: spinner-border 0.75s linear infinite;
+    animation: spinner-border 0.75s linear infinite;
+    animation-duration: 0.75s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: spinner-border;
+}
+
+@keyframes spinner-border {
+    100% {
+        transform: rotate(360deg);
+    }
+}
