@@ -3,8 +3,10 @@
     --clr-surface2: #f2f2f2;
     --clr-primary: #4CAF50;
     --clr-secondary: #76B852;
+
     --shadow-default: 0 0 20px 0 rgba(0, 0, 0, 0.2),
         0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
     font-family: "Roboto", "Arial", sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -15,7 +17,7 @@ body {
     background: var(--clr-surface);
     
     min-height: 100vh;
-    max-width: 70ch;
+    max-width: 100ch;
     width: fit-content;
     
     margin: auto;
@@ -25,16 +27,36 @@ body {
     box-shadow: var(--shadow-default)
 }
 
+table, td, th {
+    border: var(--clr-primary) solid 1px;
+    border-collapse: collapse;   
+}
+
+td, th {
+    padding: 0.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    table td:last-child, table th:last-child {
+        writing-mode: vertical-rl;
+    }
+}
+
 button {
     color: var(--clr-surface);
     background: var(--clr-primary);
-    padding: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
 }
 
 button:hover,
 button:active,
 button:focus {
     filter: brightness(92%);
+}
+
+.button-call-to-action {
+    font-size: 2em;
 }
 
 ol ol {
@@ -51,6 +73,10 @@ a:visited {
 
 .hidden {
     display: none !important;
+}
+
+.support-span {
+    color: var(--clr-primary);
 }
 
 .staticrypt-spinner-container {
